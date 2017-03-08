@@ -156,5 +156,12 @@ h1{
 /*-----------------------------------------CONTACT*/
 .monMain h3 {
     color: #00CED1;
-
+}
+.monMain textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+.monMain button {
+    
+    margin: 0 auto;
 }
