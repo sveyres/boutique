@@ -35,3 +35,20 @@ h1{
 .monFooter p{
     margin: 0;
 }
+/*--------------------------------------------------------*/
+
+/*-----------------------------------------HOME*/
+
+.carousel-inner img{
+    width: 100%;
+    height: auto;
+}
+.monMain h2{
+    margin: 4rem 0 3rem 0;
+}
+.monMain p{
+    margin: 0;
+}
+.monMain #carousel-example-generic{
+    margin: 3rem 0 4rem 0;
+}
