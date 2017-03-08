@@ -1,0 +1,21 @@
+{
+  "name": "boutique",
+  "homepage": "https://github.com/sveyres/boutique",
+  "authors": [
+    "Sylvie <sylvie.veyres@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/external/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
