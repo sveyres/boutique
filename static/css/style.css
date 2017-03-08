@@ -52,3 +52,105 @@ h1{
 .monMain #carousel-example-generic{
     margin: 3rem 0 4rem 0;
 }
+
+/*-----------------------------------------CATALOGUE*/
+
+.monMain{
+    padding: 0.5em;
+}
+.mesArticles{
+    box-shadow: 0px 0px 2px grey;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding: 1em;
+    margin: 1em 0;
+}
+.mesArticles img{
+    width: 100%;
+    height: auto;
+}
+.mesArticles h4{
+    margin: 1.5em 0 1em 0;
+}
+.mesArticles a{
+    margin:1em 0 0.5em 0;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------CONTACT*/
