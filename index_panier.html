@@ -64,7 +64,7 @@
         <!-- /.Row monHeader -->
 
         <div class="row monMain ">
-            <table class="table">
+            <table class="table table-hover monPanier">
                 <caption> Mon Panier</caption>
                 <thead>
                     <tr>
@@ -79,11 +79,35 @@
                         <th scope="row">1</th>
                         <td>Article 1</td>
                         <td>99.99€</td>
-                        <td><input type="text" name="" value="1"></td>
+                        <td><button type="button">-</button><input type="text" value="1"><button type="button">+</button><button type="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+                        <td>99.99€</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Article 1</td>
+                        <td>99.99€</td>
+                        <td><button type="button">-</button><input type="text" value="1"><button type="button">+</button><button type="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                         <td>99.99€</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="col-md-6 col-md-offset-6">
+                <table class="table table-hover monPanier">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Prix Total</th>
+                            <td>Houla !</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dont Taxes</th>
+                            <td>et oui...</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <button type="button" name="button">Commander</button>
+            </div>
         </div>
         <!-- /.Row monMain -->
 
