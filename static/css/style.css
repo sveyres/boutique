@@ -39,10 +39,13 @@ h1{
 
 /*-----------------------------------------HOME*/
 
-.carousel-inner img{
-    width: 100%;
-    height: auto;
+
+.auTop img{
+    width: auto;
+    height: 100%;
+    padding: 1em;
 }
+.autop 
 .monMain h2{
     margin: 4rem 0 3rem 0;
 }
@@ -69,7 +72,8 @@ h1{
     padding: 1em;
     margin: 1em 0;
 }
-.monArticle img{
+
+.monCat.monArticle img{
     width: 100%;
     height: auto;
 }
