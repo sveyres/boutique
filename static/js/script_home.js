@@ -13,10 +13,10 @@ $(document).ready(function(){
         }
         var monArticle = $('<article class="topArt"></article>')
         var monImage = $('<img class="img-responsive" src="'+catalog[numArticle].thumb+'" alt="">')
-        var maDesArt = $('<div class=""></div>')
-        var monTitre = $('<a href="index_produit.html"><h4>'+catalog[numArticle].name+'</h4></a>')
+        var maDesArt = $('<div class=" descripTop text-left"></div>')
+        var monTitre = $('<a href="index_produit.html?name="><h4>'+catalog[i].name+'</h4></a>')
         var maDescription =$('<p>'+catalog[i].description.substring(0,100) +'(...)</p>')
-        var monPrix =$(' <div class="lePrix text-right ">'+catalog[numArticle].price+'€</div>')
+        var monPrix =$(' <div class="lePrix">'+catalog[numArticle].price+'€ TTC</div>')
         var monPanier =$('<a href="#">Ajoutter au panier<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>')
         var legende = $('<div class="carousel-caption">Article top '+i+'</div>')
 

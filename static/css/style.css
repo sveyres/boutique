@@ -41,8 +41,11 @@ h1{
 
 
 .auTop img{
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+}
+.descripTop{
     padding: 1em;
 }
 .topArt{
@@ -75,7 +78,7 @@ h1{
     margin: 1em 0;
 }
 
-.monCat.monArticle img{
+#moncata .monArticle img{
     width: 100%;
     height: auto;
 }
