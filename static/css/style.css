@@ -62,21 +62,21 @@ h1{
 .monCat{
     padding: 0;
 }
-.mesArticles{
+.monArticle{
     box-shadow: 0px 0px 2px grey;
     padding-right: 0px;
     padding-left: 0px;
     padding: 1em;
     margin: 1em 0;
 }
-.mesArticles img{
+.monArticle img{
     width: 100%;
     height: auto;
 }
-.mesArticles h4{
+.monArticle h4{
     margin: 1.5em 0 1em 0;
 }
-.mesArticles a{
+.monArticle a{
     margin:1em 0 0.5em 0;
     display: block;
 }
