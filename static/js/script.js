@@ -21,6 +21,15 @@ $(document).ready(function(){
 
     }
 
+    $('#pagination-demo').twbsPagination({
+        items: 20,
+        itemOnPage: 8,
+        totalPages: 20,
+        visiblePages: 5,
+        onPageClick: function (event, page) {
+            $('#page-content').text('Page ' + page);
+        }
+    });
 
 })
 //
