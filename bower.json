@@ -18,8 +18,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-validator": "^0.11.9",
-    "simplePagination.js": "*",
-    "twbs-pagination": "^1.4.1",
-    "paginate": "^0.3.0"
+    "paginate": "^0.3.0",
+    "isotope": "^3.0.3"
   }
 }
