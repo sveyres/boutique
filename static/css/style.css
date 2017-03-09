@@ -45,7 +45,9 @@ h1{
     height: 100%;
     padding: 1em;
 }
-.autop 
+.topArt{
+    display: flex;
+}
 .monMain h2{
     margin: 4rem 0 3rem 0;
 }

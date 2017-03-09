@@ -24,12 +24,13 @@ $(document).ready(function(){
     for (var i = 0; i < 3; i++) {
         var numArticle=Math.floor(Math.random()*catalog.length);
         if (i==0) {
-            var maDiv = $('<div class="item active"></div>')
+            var maDiv = $('<div class="item active "></div>')
         }else {
-            var maDiv = $('<div class="item"></div>')
+            var maDiv = $('<div class="item "></div>')
         }
         var monArticle = $('<article class="topArt"></article>')
         var monImage = $('<img class="img-responsive" src="'+catalog[numArticle].thumb+'" alt="">')
+        var maDesArt = $('<div class=""></div>')
         var monTitre = $('<a href="index_produit.html"><h4>'+catalog[numArticle].name+'</h4></a>')
         var maDescription =$('<p>'+catalog[i].description.substring(0,100) +'(...)</p>')
         var monPrix =$(' <div class="lePrix text-right ">'+catalog[numArticle].price+'€</div>')
@@ -40,15 +41,16 @@ $(document).ready(function(){
         $(".auTop").append(maDiv);
             maDiv.append(monArticle);
                 monArticle.append(monImage);
-                monArticle.append(monTitre);
-                monArticle.append(maDescription);
-                monArticle.append(monPrix);
-                monArticle.append(monPanier);
+                monArticle.append(maDesArt)
+                maDesArt.append(monTitre)
+                maDesArt.append(maDescription);
+                maDesArt.append(monPrix);
+                maDesArt.append(monPanier);
         console.log(numArticle);
     }
 
     $('#pagination-demo').twbsPagination({
-        items: 20,
+        items: catalog.length,
         itemOnPage: 8,
         totalPages: 20,
         visiblePages: 5,
