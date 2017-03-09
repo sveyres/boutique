@@ -36,6 +36,7 @@ $(document).ready(function(){
         var monPanier =$('<a href="#">Ajoutter au panier<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>')
         var legende = $('<div class="carousel-caption">Article top '+i+'</div>')
 
+
         $(".auTop").append(maDiv);
             maDiv.append(monArticle);
                 monArticle.append(monImage);
@@ -45,6 +46,17 @@ $(document).ready(function(){
                 monArticle.append(monPanier);
         console.log(numArticle);
     }
+
+    $('#pagination-demo').twbsPagination({
+        items: 20,
+        itemOnPage: 8,
+        totalPages: 20,
+        visiblePages: 5,
+        onPageClick: function (event, page) {
+            $('#page-content').text('Page ' + page);
+        }
+    });
+
 
 })
 //
