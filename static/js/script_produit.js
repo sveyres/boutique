@@ -1,3 +1,8 @@
 $(document).ready(function(){
-    console.log(GET_PARAM("nom"));
+    var index = GET_PARAM("index")
+    var produit = catalog[index]
+console.log(produit);
+    $('.lePrix').html(produit.price+"€ TTC")
+    $('#imageP').attr("src", produit.thumb)
+    $('#titreArt')
 });
