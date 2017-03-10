@@ -8,19 +8,13 @@ $(document).ready(function(){
 
     $('.monPanier').click(function(){
     var quantite = $('.maQuantite').val()
-        var monObjet = {
-            propriete1 : index,
-            propriete2 : quantite
-        }
+    var panier ={};
+    panier[index]=quantite
 
-        // var panier = {
-        //     index : quantite
-        //
-        //
-        // }
-        console.log("youpi");
-        var monObjetStock_json = JSON.stringify(monObjetStock);
-        sessionStorage.setItem("objet",monObjetStock_json);
+
+        console.log(panier);
+        var panier_json = JSON.stringify(panier);
+        sessionStorage.setItem("panier",panier_json);
 
     })
 });

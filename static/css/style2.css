@@ -1,0 +1,228 @@
+.monHeader{
+    box-shadow: 0px 2px 2px lightgrey;
+    /*background-image: url(../img/turquoise-2083986.jpg);
+    background-position:50% 100%;
+    background-size: cover;*/
+    background-color: #018FD7;
+
+}
+.monIdent,
+.monIdent a{
+    color:#ffffff;
+    margin: 0.5em;
+    height: auto;
+}
+
+h1{
+    padding: 4rem 0 0.2rem 2rem;
+    margin: 0;
+    /*font-family: 'Walter Turncoat', cursive;*/
+    text-transform: uppercase;
+    font-size: 6em;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+}
+
+h6{
+    padding: 0 0 8rem 2rem ;
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+}
+.maNav{
+    padding: 0;
+    margin: 0;
+    border-radius: 0px;
+    font-family: 'Oswald', sans-serif;
+
+}
+.inputRecherche{
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 0.5em;
+}
+
+.monFooter{
+    background-color: black;
+    padding: 1em 0;
+    color: grey;
+}
+.monFooter p{
+    margin: 0;
+}
+.navbar-default {
+    background-color: #0466a3;
+    border-style: none;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #32bdda;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: white;
+    background-color: #32bdda;
+}
+
+.btn-default {
+
+    color: #32bdda;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+
+}
+/*--------------------------------------------------------*/
+
+/*-----------------------------------------HOME*/
+
+.auTop{
+    /*background-color: white;*/
+}
+
+.auTop img{
+    width: 100%;
+    height: auto;
+    padding: 1em;
+}
+.descripTop{
+    padding: 1em;
+    color: #0466a3;
+}
+.topArt{
+    display: flex;
+}
+.monMain h2{
+    margin: 4rem 0 3rem 0;
+    font-family: 'Oswald', sans-serif;
+}
+.monMain p{
+    margin: 0;
+}
+.monMain #carousel-example-generic{
+    margin: 3rem 0 4rem 0;
+}
+
+/*-----------------------------------------CATALOGUE*/
+
+.monMain{
+    padding: 0.5em;
+    min-height:58vh;
+    background-color: #32bdda;
+    color: white;
+
+}
+.monCat{
+    padding: 0;
+}
+.monArticle{
+    box-shadow: 0px 0px 2px grey;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+#moncata .monArticle img{
+    width: 100%;
+    height: auto;
+}
+.monArticle h4{
+    margin: 1.5em 0 1em 0;
+    background-color: #ffffff;
+}
+.monArticle a{
+    margin:1em 0 0.5em 0;
+    display: block;
+}
+.lePrix{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------PANIER*/
+
+.monPanier input{
+    width: 4em;
+    text-align: right;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------CONTACT*/
+.monMain h3 {
+    color: #00CED1;
+}
+.monMain textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+.monMain button {
+
+    margin: 0 auto;
+}
+/*------------------------------------------PRODUIT*/
+.monMain .monProduit {
+    padding: 2em 0;
+}
