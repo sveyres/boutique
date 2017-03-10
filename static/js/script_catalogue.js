@@ -22,14 +22,15 @@ $(document).ready(function() {
     $('#moncata').paginate({
         perPage: 8
     });
-    $('#inlineRadio1').click(function(){
-        $('.grid').isotope({
-            // options
-            itemSelector: '.grid-item',
-            layoutMode: 'fitRows',
-            sortBy: 'catalog.price'
-        });
+    // $('#inlineRadio1').click(function(){
+    //     $('.grid').isotope({
+    //         // options
+    //         itemSelector: '.grid-item',
+    //         layoutMode: 'fitRows',
+    //         sortBy: 'catalog.price'
+    //     });
+    //
+    // })
 
-    })
 
 });
