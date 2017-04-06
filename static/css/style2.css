@@ -173,7 +173,10 @@ h6{
     text-align: right;
 
 }
-
+.maQuantite,
+div.col-md-8:nth-child(4) > form:nth-child(1) > button:nth-child(1){
+    color: #0466a3;
+}
 
 
 

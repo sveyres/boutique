@@ -16,6 +16,11 @@
                         <th>Prix Total TTC</th>
                 </thead>
                 <tbody id="lePanier">
+                    <?php
+                        echo $_POST['quantity'];
+                     ?>
+
+
                 </tbody>
             </table>
             <div class="col-md-6 col-md-offset-6">

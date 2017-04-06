@@ -27,22 +27,24 @@
                             <img id="imageP" src="http://lorempixel.com/200/200/" alt="img">
                         </div>
                         <div class="col-md-8">
-                            <span class="lePrix"'.$row['price'].' €>'.$row['price'].' €</span>
+                            <span name ="prix" class="lePrix"'.$row['price'].' €>'.$row['price'].' €</span>
                         </div>
-                        <div class="col-md-8">
-                            <input type="number" name="quantity" value ="1" min="1" max="10" class="maQuantite">
-                        </div>
-                        <div class="col-md-8">
-                            <a href="#"class="monPanier">Ajouter au panier<span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-                        </div>
+                        <form action="index_panier.php" method="post">
+                            <div class="col-md-8">
+                                <input type="number" name="quantity" value ="1" min="1" max="10" class="maQuantite">
+                            </div>
+                            <div class="col-md-8">
+                                    <button type="button" name="button">Ajouter au panier<span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+                            </div>
+                        </form>
                         <div class="col-md-12 text-justify">
-                            <h3 id="titreArt">'.$row['name'].'</h3>
-                            <p id="desc">'.$row['description'].'</p>
+                            <h3 name="designation" id="titreArt">'.$row['name'].'</h3>
+                            <p name="description" id="desc">'.$row['description'].'</p>
                         </div>';
                  ?>
 
 
-                </div> 
+                </div>
             </article>
         </div>
         <!-- /.Row monMain -->
