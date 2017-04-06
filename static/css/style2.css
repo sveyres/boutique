@@ -1,3 +1,4 @@
+
 .monHeader{
     box-shadow: 0px 2px 2px lightgrey;
     /*background-image: url(../img/turquoise-2083986.jpg);
@@ -14,7 +15,7 @@
 }
 
 h1{
-    padding: 4rem 0 0.2rem 2rem;
+    padding: 4rem 0 7rem 2rem;
     margin: 0;
     /*font-family: 'Walter Turncoat', cursive;*/
     text-transform: uppercase;
@@ -80,6 +81,7 @@ h6{
 
 .auTop{
     /*background-color: white;*/
+    background-color: #ffffff;
 }
 
 .auTop img{
@@ -87,6 +89,16 @@ h6{
     height: auto;
     padding: 1em;
 }
+.carousel-control.right,.carousel-control.left{
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 100%,rgba(0,0,0,.5) 0%);
+}
+.carousel-control .glyphicon-chevron-right{
+    right: 10%;
+}
+.carousel-control .glyphicon-chevron-left{
+    left: 10%;
+}
+
 .descripTop{
     padding: 1em;
     color: #0466a3;
@@ -119,6 +131,8 @@ h6{
 }
 .monArticle{
     box-shadow: 0px 0px 2px grey;
+    background-color: white;
+    color: #0466a3;
     padding-right: 0px;
     padding-left: 0px;
     padding: 1em;
@@ -212,7 +226,7 @@ h6{
 
 /*-----------------------------------------CONTACT*/
 .monMain h3 {
-    color: #00CED1;
+    color: #ffffff;
 }
 .monMain textarea {
     box-sizing: border-box;

@@ -12,7 +12,7 @@ $(document).ready(function(){
             var maDiv = $('<div class="item "></div>')
         }
         var monArticle = $('<article class="topArt"></article>')
-        var monImage = $('<img class="img-responsive" src="'+catalog[numArticle].thumb+'" alt="">')
+        var monImage = $('<img class="img-responsive" src="http://lorempixel.com/200/200/" alt="">')
         var maDesArt = $('<div class=" descripTop text-left"></div>')
         var monTitre = $('<a href="index_produit.html?name="><h4>'+catalog[i].name+'</h4></a>')
         var maDescription =$('<p>'+catalog[i].description.substring(0,100) +'(...)</p>')

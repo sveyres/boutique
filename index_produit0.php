@@ -1,3 +1,7 @@
+<?php
+    ini_set('display_errors',1);
+    error_reporting(E_ALL);
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -64,7 +68,44 @@
         <!-- /.Row monHeader -->
         <div class="row monMain">
             <article class="monProduit">
-                <div class="col-md-4">
+                <?php
+                $index = $_GET["index"];
+
+                define('MYSQL_SERVEUR', 'localhost');
+                define('MYSQL_UTILISATEUR', 'phpsyl');
+                define('MYSQL_MOTDEPASSE', 'plop');
+                define('MYSQL_BASE', 'shop');
+
+                $mysql = new mysqli(MYSQL_SERVEUR,
+                            MYSQL_UTILISATEUR,
+                            MYSQL_MOTDEPASSE,
+                            MYSQL_BASE);
+                $mysql->set_charset("utf8");
+                $sql = 'select * from Product WHERE id='.$index.';';
+                $result = $mysql->query($sql);
+
+                $row = $result->fetch_assoc();
+                    echo '<div class="col-md-4">
+                        <img id="imageP" src="http://lorempixel.com/100/100/" alt="img">
+                    </div>
+                    <div class="col-md-8">
+                        <span class="'.$row['price'].'"></span>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="number" name="quantity" value ="1" min="1" max="10" class="maQuantite">
+                    </div>
+                    <div class="col-md-8">
+                        <a href="#"class="monPanier">Ajouter au panier<span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="col-md-12 text-justify">
+                        <h3 id="titreArt">'.$row['name'].'</h3>
+                        <p id="desc">'.$row['description'].'</p>
+                    </div>';
+
+                 ?>
+
+
+                <!-- <div class="col-md-4">
                     <img id="imageP"src="http://placehold.it/350x350" alt="img">
                 </div>
                 <div class="col-md-8">
@@ -78,8 +119,8 @@
                 </div>
                 <div class="col-md-12 text-justify">
                     <h3 id="titreArt">Article 1</h3>
-                    <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+                    <p id="desc">Lorem ipsum </p>
+                </div> -->
             </article>
         </div>
         <!-- /.Row monMain -->

@@ -1,3 +1,7 @@
+<?php
+    ini_set('display_errors',1);
+    error_reporting(E_ALL);
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -5,20 +9,24 @@
     <meta charset="utf-8">
     <title>Boutique</title>
     <link rel="stylesheet" href="static/external/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
-     <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Oswald|Rufina" rel="stylesheet">
+    <?php $myLinks = array();
+        if(isset($links)){array_push($myLinks, $links);}
+        for ($i=0; $i < count($myLinks); $i++) {echo $myLinks[$i];};
+        ?>
 </head>
 
 <body>
-
     <div class="container">
         <div class="row monHeader">
             <div class="col-md-12 text-right monIdent">
-                <a href="#">S'identifier <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-                <a href="#">Panier<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                <a href="index_login.php">S'identifier <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                <a href="index_panier.php">Panier<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"><span class="badge">42</span></span></a>
             </div>
-            <div class="col-md-12 text-center">
-                <h1>Ma Boutique</h1>
+            <div class="col-md-12 ">
+                <h1><?php echo $title ?></h1>
             </div>
 
             <div class="col-md-12 nopadding maNav">
@@ -38,10 +46,15 @@
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catalogue <span class="caret"></span></a>
+                                <li class="<?php if ($current === 'Home'){echo 'active';}; ?>">
+                                <a href="index.php">Home<span class="sr-only">(current)</span></a></li>
+                                <li class="<?php if ($current === 'Catalogue'){
+                                    echo 'active';
+                                }; ?> dropdown">
+                                    <a href="index_catalogue.php" class=" dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catalogue <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
+                                        <li><a href="index_catalogue.php">Général</a></li>
+                                        <li role="separator" class="divider"></li>
                                         <li><a href="#">Catégorie 1</a></li>
                                         <li role="separator" class="divider"></li>
                                         <li><a href="#">Catégorie 2</a></li>
@@ -50,7 +63,7 @@
                                         <li role="separator" class="divider"></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Contact</a></li>
+                                <li class = "<?php if ($current === 'Contact'){echo 'active';}; ?>"><a  href="index_contact.php">Contact</a></li>
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->
@@ -58,26 +71,5 @@
                     <!-- /.container-fluid -->
                 </nav>
             </div>
-        </div><!-- /.Row monHeader -->
-        <div class="row monMain">
-
-            <!-- A COMPLETER -->
-
-        </div><!-- /.Row monMain -->
-        <div class="row monFooter">
-
-            <div class="col-md-12 text-center">
-                <p class="noMargin"> @ Copyright - Mentions Obligatoires</p>
-            </div>
-
-        </div><!-- /.Row monFooter -->
-    </div><!-- /.container -->
-</body>
-
-<script src="static/external/jquery/dist/jquery.js"></script>
-<script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="static/external/bootstrap-validator/dist/validator.min.js" charset="utf-8"></script>
-<script src="static/js/script2.js"></script>
-<script src="" charset="utf-8"></script>
-
-</html>
+        </div>
+        <!-- /.Row monHeader -->

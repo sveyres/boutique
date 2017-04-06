@@ -19,6 +19,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-validator": "^0.11.9",
     "paginate": "^0.3.0",
-    "isotope": "^3.0.3"
+    "isotope": "^3.0.3",
+    "validator": "^0.0.5"
   }
 }

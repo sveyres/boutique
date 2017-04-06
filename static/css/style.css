@@ -3,7 +3,7 @@
 }
 .monIdent,
 .monIdent a{
-    color:#00CED1;
+    color:#018FD7;
     margin: 0.5em;
     height: auto;
 }
@@ -11,10 +11,10 @@
 h1{
     padding: 1.5em 0 2em 0;
     margin: 0;
-    font-family: 'Walter Turncoat', cursive;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     font-size: 4em;
-    color: #00CED1;
+    color: #018FD7;
 }
 .maNav{
     padding: 0;
@@ -114,57 +114,9 @@ h1{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-----------------------------------------CONTACT*/
 .monMain h3 {
-    color: #00CED1;
+    color: #018FD7;
 }
 .monMain textarea {
     box-sizing: border-box;

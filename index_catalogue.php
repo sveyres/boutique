@@ -1,68 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Boutique</title>
-    <link rel="stylesheet" href="static/external/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/external/paginate/src/jquery.paginate.css">
-    <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
-</head>
-
-<body>
-
-    <div class="container">
-        <div class="row monHeader">
-            <div class="col-md-12 text-right monIdent">
-                <a href="#">S'identifier <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-                <a href="index_panier.html">Panier<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-            </div>
-            <div class="col-md-12 text-center">
-                <h1>Ma Boutique</h1>
-            </div>
-
-            <div class="col-md-12 nopadding maNav">
-                <nav class="navbar navbar-default maNav">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                            <form class="inputRecherche">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                            </form>
-                        </div>
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li class=""><a href="index_home.html">Home<span class="sr-only">(current)</span></a></li>
-                                <li class="dropdown">
-                                    <a href="index_catalogue.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catalogue <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="index_catalogue.html">Général</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Catégorie 1</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Catégorie 2</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Catégorie 3</a></li>
-                                        <li role="separator" class="divider"></li>
-                                    </ul>
-                                </li>
-                                <li><a href="index_contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                        <!-- /.navbar-collapse -->
-                    </div>
-                    <!-- /.container-fluid -->
-                </nav>
-            </div>
-        </div>
-        <!-- /.Row monHeader -->
+<?php $title = "Ma boutique";
+    $current = 'Catalogue';
+    $links ="<link rel='stylesheet' href='static/external/paginate/src/jquery.paginate.css'>";
+    include 'header.php';
+    ?>
 
         <div class="row monMain ">
             <div class="col-md-3 text-center monCat">
@@ -133,42 +73,45 @@
                             <a href="#">Ajoutter au panier<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
                         </article>
                     </div> -->
-                    
+                    <?php
+                        define('MYSQL_SERVEUR', 'localhost');
+                        define('MYSQL_UTILISATEUR', 'phpsyl');
+                        define('MYSQL_MOTDEPASSE', 'plop');
+                        define('MYSQL_BASE', 'shop');
+
+                        $mysql = new mysqli(MYSQL_SERVEUR,
+                                    MYSQL_UTILISATEUR,
+                                    MYSQL_MOTDEPASSE,
+                                    MYSQL_BASE);
+                        $mysql->set_charset("utf8");
+                        $sql = 'select * from Product';
+                        $result = $mysql->query($sql);
+                        $i=1;
+                        while ($row = $result->fetch_assoc()) {
+
+                            echo '<div class="col-md-3 monBlockArticle">
+                                <article class="monArticle">
+                                    <img class="img-responsive" src="http://lorempixel.com/100/100/" alt="">
+                                    <a href="index_produit.php?index='.$i. '"><h4>'.$row['name'].'</h4></a>
+                                    <p>'.$row['description'].'</p>
+                                    <div class="lePrix text-right ">'.$row['price'].' €</div>
+                                    <a href="#">Ajoutter au panier<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                                </article></div>';
+                                $i+=1;
+                            // echo $row['name']." ".$row['description']." ".$row['price']."<br />";
+                        }
+                        $result->free();
+                        $mysql->close();
+                     ?>
 
                     </div>
                     <div class="row text-center">
                         <ul id="pagination-demo" class="pagination-sm"></ul>
                     </div>
-
-
-
-
             </div>
         </div>
         <!-- /.Row monMain -->
 
-
-
-
-
-        <div class="row monFooter">
-
-            <div class="col-md-12 text-center">
-                <p class="noMargin"> @ Copyright - Mentions Obligatoires</p>
-            </div>
-
-        </div>
-        <!-- /.Row monFooter -->
-    </div>
-    <!-- /.container -->
-    <script src="static/external/jquery/dist/jquery.js"></script>
-    <script src="static/external/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="static/external/isotope/dist/isotope.pkgd.js" charset="utf-8"></script>
-    <!-- <script src="static/js/catalog_x100.js" charset="utf-8"></script> -->
-    <script src="static/external/paginate/src/jquery.paginate.js" charset="utf-8"></script>
-    <!-- <script src="static/js/script_catalogue.js"></script> -->
-</body>
-
-
-
-</html>
+        <?php $scripts = '<script src="static/external/paginate/src/jquery.paginate.js" charset="utf-8"></script>
+        <script src="static/js/script_catalogue.js"></script>' ?>
+        <?php include 'footer.php'; ?>
