@@ -171,11 +171,20 @@ h6{
 .monPanier input{
     width: 4em;
     text-align: right;
-
+    color:#0466a3;
+}
+button{
+    color:#0466a3;
 }
 .maQuantite,
 div.col-md-8:nth-child(4) > form:nth-child(1) > button:nth-child(1){
     color: #0466a3;
+}
+.monPanier tr:hover{
+    background-color:#0466a3;
+}
+.prixTotal tr:hover{
+        background-color:#0466a3;
 }
 
 

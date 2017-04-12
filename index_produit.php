@@ -19,6 +19,7 @@
                                 MYSQL_MOTDEPASSE,
                                 MYSQL_BASE);
                     $mysql->set_charset("utf8");
+
                     $sql = 'select * from Product WHERE id='.$index.';';
                     $result = $mysql->query($sql);
 
@@ -32,15 +33,17 @@
                         <form action="index_panier.php" method="post">
                             <div class="col-md-8">
                                 <input type="number" name="quantity" value ="1" min="1" max="10" class="maQuantite">
+                                <input type="text" name="id_product" value ="'.$index.'" min="1" max="10" class="">
                             </div>
                             <div class="col-md-8">
-                                    <button type="button" name="button">Ajouter au panier<span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+                                <button type="submit" name="button">Ajouter au panier<span class=" glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
                             </div>
                         </form>
                         <div class="col-md-12 text-justify">
                             <h3 name="designation" id="titreArt">'.$row['name'].'</h3>
                             <p name="description" id="desc">'.$row['description'].'</p>
                         </div>';
+
                  ?>
 
 
